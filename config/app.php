@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Filament\FilamentServiceProvider;
 
 return [
 
@@ -170,6 +171,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        App\Providers\FilamentServiceProvider::class,
     ])->toArray(),
 
     /*
