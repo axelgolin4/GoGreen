@@ -11,7 +11,7 @@ class Bill extends Model
     use HasFactory;
 
     protected $guarder = [];
-    protected $fillable = ['date','total', 'user_id', 'detail_id'];
+    protected $fillable = ['date','total', 'detail_id'];
 
     public function Detail()
     {

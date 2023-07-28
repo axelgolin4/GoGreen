@@ -23,7 +23,7 @@ class BillResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('category_id')
+                Forms\Components\TextInput::make('detail_id')
                     ->required(),
                 Forms\Components\DateTimePicker::make('date')
                     ->required(),
@@ -36,7 +36,7 @@ class BillResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('category_id'),
+                Tables\Columns\TextColumn::make('detail_id'),
                 Tables\Columns\TextColumn::make('date')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('total'),

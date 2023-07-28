@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
             $table->dateTime("date");
-            $table->foreignId("category_id")->references("id")->on('categories')->onDelete("cascade");
             $table->float("total");
+            $table->foreignId("detail_id")->references("id")->on('details')->onDelete("cascade");
             $table->timestamps();
         });
     }
