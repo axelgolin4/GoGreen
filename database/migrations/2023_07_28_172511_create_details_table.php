@@ -15,9 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer("cuantity");
             $table->float("subtotal");
-            $table->foreignId("bill_id")->references("id")->on('bills')->onDelete("cascade");
             $table->foreignId("products_id")->references("id")->on('products')->onDelete("cascade");
-
+            $table->foreignId("bill_id")->references("id")->on('bills')->onDelete("cascade");
             $table->timestamps();
         });
     }
