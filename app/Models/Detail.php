@@ -12,7 +12,7 @@ class Detail extends Model
     use HasFactory;
 
     protected $guarder = [];
-    protected $fillable = ['cuantity', 'subtotal', 'products_id'];
+    protected $fillable = ['cuantity', 'subtotal', 'products_id', 'bill_id'];
 
     public function Product()
     {

@@ -17,14 +17,14 @@ class BillResource extends Resource
 {
     protected static ?string $model = Bill::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-cash';
-    protected static ?string $navigationGroup = 'Sale';
+    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+    protected static ?string $navigationGroup = 'Sales';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('detail_id')
+                Forms\Components\TextInput::make('user_id')
                     ->required(),
                 Forms\Components\DateTimePicker::make('date')
                     ->required(),
@@ -37,7 +37,7 @@ class BillResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('detail_id'),
+                Tables\Columns\TextColumn::make('user_id'),
                 Tables\Columns\TextColumn::make('date')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('total'),

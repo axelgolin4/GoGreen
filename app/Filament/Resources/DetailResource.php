@@ -17,14 +17,16 @@ class DetailResource extends Resource
 {
     protected static ?string $model = Detail::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-calculator';
-    protected static ?string $navigationGroup = 'Sale';
+    protected static ?string $navigationIcon = 'heroicon-o-cash';
+    protected static ?string $navigationGroup = 'Sales';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
                 Forms\Components\TextInput::make('products_id')
+                    ->required(),
+                Forms\Components\TextInput::make('bill_id')
                     ->required(),
                 Forms\Components\TextInput::make('cuantity')
                     ->required(),
@@ -38,6 +40,7 @@ class DetailResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('products_id'),
+                Tables\Columns\TextColumn::make('bill_id'),
                 Tables\Columns\TextColumn::make('cuantity'),
                 Tables\Columns\TextColumn::make('subtotal'),
                 Tables\Columns\TextColumn::make('created_at')
