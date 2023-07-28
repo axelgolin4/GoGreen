@@ -17,7 +17,8 @@ class DetailResource extends Resource
 {
     protected static ?string $model = Detail::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-calculator';
+    protected static ?string $navigationGroup = 'Sale';
 
     public static function form(Form $form): Form
     {

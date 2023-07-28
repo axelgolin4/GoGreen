@@ -21,6 +21,6 @@ class Detail extends Model
 
     public function Bill()
     {
-        return $this->hasMany(Bill::class);
+        return $this->belongsTo(Bill::class);
     }
 }

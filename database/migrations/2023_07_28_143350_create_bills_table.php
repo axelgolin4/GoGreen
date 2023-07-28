@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->dateTime("date");
             $table->float("total");
-            $table->foreignId("detail_id")->references("id")->on('details')->onDelete("cascade");
+            $table->foreignId("user_id")->references("id")->on('users')->onDelete("cascade");
             $table->timestamps();
         });
     }
